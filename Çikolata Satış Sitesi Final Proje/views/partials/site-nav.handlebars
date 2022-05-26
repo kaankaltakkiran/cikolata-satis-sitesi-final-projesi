@@ -1,0 +1,37 @@
+ <header>
+                       <!-- Kendim Yaptım Logoyu -->
+                       <!--https://logomaker.thehoth.com/-->
+             <div id="logo">
+                <a href="/anasayfa">   
+            <img src="/resimler/logo.png" alt="Logo Resmi">
+            </div>
+        </a>
+            <nav>
+                <!-- Mobil Boyutta Responsive Bar için-->
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </label>
+                      <!-- Header Menü-->
+                <ul>
+                    <li><a href="/anasayfa">Ana Sayfa</a></li>
+                    <li><a href="/hakkinda">Hakkında</a></li>
+                    <li><a href="/kaan">Add Post</a></li>
+                    <li><a href="/siparis">Sipariş</a></li>
+                    <li><a href="/iletisim">İletişim</a></li>
+                    <li><a href="/admin">Admin</a></li> 
+                     {{#unless displayLink}}
+                    <li><a href="/users/login">Giriş</a></li>
+                    <li><a href="/users/kayit">Üye Ol</a></li>
+                    {{/unless}}
+                    {{#if displayLink}}
+                     <li><a href="/users/cikis">Çıkış</a></li>
+                     {{/if}}
+                </ul>
+            </nav>
+            <div id="shop-cart">
+                <a href="/sepet">
+                <img src="/resimler/sepet.png" alt="Sepet">
+            </a>
+            </div>
+            </header>

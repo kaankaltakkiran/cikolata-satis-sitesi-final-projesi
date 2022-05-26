@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/iletişim.css">
+ <section >
+                      <!-- Harita Kısmı -->
+        <div id="harita">
+            <h4>Şirket</h4>
+                <iframe class="konum" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.5039815720293!2d29.8964543153677!3d39.4805330794849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c9486d6b77991d%3A0xa51a8d9c8451df0e!2sK%C3%BCtahya%20Dumlup%C4%B1nar%20%C3%9Cniversitesi%20M%C3%BChendislik%20Fak%C3%BCltesi!5e0!3m2!1str!2str!4v1647098597145!5m2!1str!2str"  allowfullscreen="" loading="lazy"></iframe>   
+        </div>
+                              <!-- Forum Kısmı -->
+        <div id="iletisim">
+            <h3>Bize Ulaşın</h3>
+            {{#if sessionFlash.message}}
+              <div class="{{sessionFlash.type}}" >
+                  {{sessionFlash.message}}
+              </div>
+            {{/if}}
+
+                    <form action="/contact/email" method="post">
+                        <input type="text" name="name" class="text-box" placeholder="Adınız" required>
+                        <input type="e-mail" name="email" class="text-box" placeholder="Emailiniz" required>
+                        <textarea name="message" rows="5" placeholder="Mesajınızı Giriniz" required></textarea>
+                        <input type="submit" name="gonder" class="send-btn" value="Gönder">
+                    </form>
+                </div>
+                                       <!-- Şirket Bilgileri Kısmı -->
+                <div class="contact-section">
+                <div class="contact-info">
+                    <div><i class="fa-solid fa-location-dot"></i>Kütahya/Merkez</div>
+                    <div><i class="fa-solid fa-envelope"></i>durdu.kaltakkiran@ogr.dpu.edu.tr</div>
+                    <div><i class="fa-solid fa-phone"></i>05076600884</div>
+                    <div><i class="fa-solid fa-house"></i>7/24</div>
+                    </div>
+                </div>
+        </div>
+
+    </section>

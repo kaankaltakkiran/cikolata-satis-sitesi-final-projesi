@@ -1,0 +1,434 @@
+*{                                          
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+                 
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    height:auto;
+    padding-bottom: 1rem;
+    background-color: rgb(204, 161, 109);
+   
+}
+                             /* Ana Orta Bölüm*/ 
+header{                  
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-around;
+    background-color: rgb(204, 161, 109);
+    
+}
+
+#logo{
+    width: 20%;
+    height: 100%;
+    display: inline-block;
+}
+#logo img{
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+}
+
+.btn{
+    display:inline-block;
+    background: red;
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 30px;
+    border-radius: 30px;
+}
+.btn:hover{
+    transform: scale(1.5);
+    border: 2px black;
+}
+
+                            /* Responsiv Kısmı */
+.checkbtn
+{
+    font-size: 25px;
+    color: #51361a;
+    float: right;
+    line-height: 8px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+#check
+{
+    display: none;
+}
+
+@media (max-width: 720px)
+{
+    label.logo
+    {
+        font-size: 2em;
+        padding-left: 50px;
+    }
+    nav ul li a
+    {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 800px)
+{
+    .checkbtn
+    {
+        display: block;
+    }
+    ul
+    {
+        position: fixed;
+        width: 80%;
+        height: 18vh;
+        background: navajowhite;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav ul li
+    {
+        display: block;
+        margin: 50px 0;
+        line-height: 18px;
+    }
+    nav ul li a
+    {
+        font-size: 1.2em;
+    }
+    a:hover,a.avtive
+    {
+        background: none;
+        color: white;
+    }
+    #check:checked ~ ul
+    {
+        left: 0;
+    }
+}
+
+                       /*Menü Kısmı*/ 
+nav{
+    flex: 1;
+    text-align: right;
+    display: inline-block;    
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+nav a{
+    text-decoration: none;
+    color:rgb(60, 27, 22);
+    font-weight:bold;
+    font-size: large; 
+}
+nav a::after{
+    content: "";
+    position: absolute;
+    height:2px;
+    width: 0%;
+    top:30px;
+    left: 0;
+background-color: white;
+transition: all .4s;
+}
+nav a:hover::after{
+    width: 100%;
+}
+
+                            /* Sepet Kısmı */
+.cart .table{
+    margin-bottom: 30px;
+    border-bottom: 1px solid #fff;
+    
+   
+}
+.cart .table thead tr th{
+    border-top:0px;
+    font-size:16px;
+    font-weight: bold;
+    border-bottom:0px;
+    
+}
+.cart .table thead tr td{
+    padding-top:30px;
+    padding-bottom: 30px;
+    vertical-align: middle;
+    align-self: center;
+
+}
+.cart .table tbody tr td .main .d-flex{
+    padding-right:30px;
+}
+.cart .table tbody tr td .main .d-flex img{
+    border: 2px solid #000;
+    border-radius: 3px;
+}
+.cart .table tbody tr td .main .des{
+    vertical-align: middle;
+    align-self: center;
+}
+.cart .table tbody tr td .main .des p{
+    margin-bottom:0px;
+}
+.cart .table tbody tr td h6{
+    font-size:16px;
+    color:#000;
+    margin-bottom: 0px;
+}
+.cart .table tbody tr td .counter{
+    margin-bottom:0px;
+}
+.counter i{
+    border: 1px solid #000;
+    padding: 7px;
+    display: inline-block;
+    position: relative;
+}
+.cart .table tbody tr td .counter input{
+    width: 100px;
+    padding-left:30px;
+    height: 40px;
+    outline:none;
+    box-shadow: none;
+}
+.checkout ul{
+    border: 2px solid #ebebeb;
+    background: #f3f3f3;
+    padding-left:25px;
+    padding-right:25px;
+    padding-top:16px;
+    padding-bottom: 20px;
+}
+.checkout ul li{
+    list-style: none;
+    font-size:16px;
+    font-weight: bold;
+    color:#252525;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+.checkout ul li.subtotal{
+    font-weight: bold;
+    text-transform: capitalize;
+    border-bottom:1px solid #fff;
+    padding-bottom: 14px;
+}
+.checkout ul li.subtotal span{
+    font-weight: bold;
+}
+.checkout ul li.cart-total{
+    padding-top: 10px
+}
+.checkout ul li.cart-total span{
+    color:red;
+}
+.checkout ul li span{
+    float:right;
+}
+.checkout .proceed-btn{
+    font-size:15px;
+    font-weight: bold;
+    color:#fff;
+    background:#252525;
+    text-transform: uppercase;
+    padding:15px 25px 14px 25px;
+    display: block;
+    text-align: center;
+}
+                                     /*Footer Bölümü*/
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+    header {
+        padding-top: 40px;
+    }
+}
+
+.footer-distributed {
+    background-color: #2d2a30;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer Logo */
+.logo{
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+}
+
+.footer-distributed .logo {
+    width: 20%;
+    display: inline-block;
+}
+
+.logo img{
+  padding:0 50px;
+}
+
+/* Footer Menü */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer İletişim */
+
+.footer-distributed .footer-center {
+    width: 35%;
+    padding-left: 150px;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #ffffff;
+    text-decoration: none;
+    ;
+}
+
+/* Footer Şirket */
+
+.footer-distributed .footer-right {
+    width: 30%;
+    padding-left: 200px;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+    background-color: #51361a;
+}
+
+.footer-links a:hover {
+    color: #51361a;
+}
+
+@media (max-width: 880px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+} 
+
+
+
+

@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="/kayıtol.css">
+ <div class="container">
+
+        <form action="/users/kayit" method="post">
+
+            <div class="title">Kayıt Ol</div>
+
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Adınızı Giriniz." required>
+                <div class="underline"></div>
+            </div>
+
+            <div class="input-box">
+                <input type="text" name="surname" placeholder="Soyadınızı Giriniz." required>
+                <div class="underline"></div>
+            </div>
+            <div class="input-box">
+                <input type="email" name="email" placeholder="Email Giriniz." required>
+                <div class="underline"></div>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Şifrenizi Giriniz." required>
+                <div class="underline"></div>
+            </div>
+            <div class="input-box">
+                <input type="password" name="rpassword" placeholder="Şifrenizi(Tekrar) Giriniz." required>
+                <div class="underline"></div>
+            </div>
+            <div class="input-box">
+                <input type="tel" name="number" placeholder="Telefon Numarası" maxlength="11" required>
+                <div class="underline"></div>
+            </div>
+
+            <div class="üyelik-form">
+                <input type="checkbox" name="üye">Üyelik Sözleşmesi şartlarını okudum ve kabul ediyorum.
+                <div class="underline"></div>
+            </div>
+
+            <div class="input-box button">
+                <input type="submit" value="Kayıt Ol ">
+            </div>
+            
+        </form>
+
+        <div class="text">Sosyal Medya İle Kayıt Ol</div>
+
+        <!--Sosyal Medya Butonları-->
+
+        <div class="twitter">
+            <a href="https://twitter.com/?lang=tr"><i class="fab fa-twitter"></i>Twitter ile Kaydol</a>
+        </div>
+
+        <div class="facebook">
+            <a href="https://tr-tr.facebook.com/"><i class="fab fa-facebook"></i>Facebook ile Kaydol</a>
+        </div>
+    </div>

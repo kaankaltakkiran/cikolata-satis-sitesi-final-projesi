@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    background-color: rgb(204, 161, 109);
+}
+
+                                 /*Kayıt OL Kısmı*/
+.container {
+    background: #fff;
+    max-width: 350px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.container form .title {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+    text-align: center;
+    position: relative;
+    color: red;
+}
+
+
+
+.container form .title::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 33px;
+    bottom: 2px;
+    left: 0;
+    border-radius: 5px;
+}
+
+
+.container form .input-box {
+    width: 100%;
+    height: 45px;
+    margin-top: 25px;
+    position: relative;
+}
+
+.container form .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border: none;
+}
+
+.container form .underline:before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    left: 0;
+    bottom: 0;
+}
+
+.container form .underline:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: red;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease;
+}
+
+.container form .input-box input:focus~.underline:after,
+.container form .input-box input:valid~.underline:after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.container form .button {
+    margin: 40px 0 20px 0;
+}
+.container form .input-box input[type="submit"]{
+    font-size: 17px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background: red;
+    transition: all 0.3s ease;
+}
+
+.container form .input-box input[type="submit"]:hover {
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.15);
+    color: red;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.container .text{
+    font-size: 14px;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+.container .twitter a,
+.container .facebook a{
+    display: block;
+    width: 100%;
+    height: 45px;
+    font-size: 15px;
+    text-decoration: none;
+    padding-left: 20px;
+    color: #fff;
+    line-height: 45px;
+    border-radius: 5px;
+}
+
+
+.container .twitter a{
+    background: #1ad1f2;
+    margin: 20px 0 15px 0;
+}
+
+.container .twitter a:hover{
+    background: #aabbbe;
+}
+
+.container .facebook a{
+    background: #4267b2;
+    margin: 20px 0 50px 0;
+}
+
+.container .facebook a:hover{
+    background: #8797b6;
+}
+
+.container .twitter i,
+.container .facebook i{
+    font-size: 22px;
+    padding-right: 22px;
+}
+
+
+                                     /*Fottor Bölümü*/
+.footer-distributed {
+    background-color: #2d2a30;
+   box-sizing: border-box;
+   width: 100%;
+   text-align: left;
+   font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+   }
+   .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+       display: inline-block;
+       vertical-align: top;
+   }
+   
+   /* Footer Logo */
+   .logo{
+       width: 30%;
+       height: 100%;
+       display: inline-block;
+   }
+   .logo img{
+       width: 100%;
+       height: 100%;
+       padding-top: 50px;
+       padding:0 50px;
+   }
+   .footer-distributed .logo {
+       width: 20%;
+       display: inline-block;
+   }
+   
+   
+   /* Footer Menü */
+   
+   .footer-distributed .footer-links {
+       color: #ffffff;
+       margin: 20px 0 12px;
+   }
+   .footer-distributed .footer-links a {
+       display: inline-block;
+       line-height: 1.8;
+       text-decoration: none;
+       color: inherit;
+   }
+   
+   .footer-distributed .footer-company-name {
+       color: #8f9296;
+       font-size: 14px;
+       font-weight: normal;
+       margin: 0;
+   }
+   /* Footer İletişim */
+   
+   .footer-distributed .footer-center {
+       width: 35%;
+       padding-left: 150px;
+   }
+   
+   .footer-distributed .footer-center i {
+       background-color: #33383b;
+       color: #ffffff;
+       font-size: 25px;
+       width: 38px;
+       height: 38px;
+       border-radius: 50%;
+       text-align: center;
+       line-height: 42px;
+       margin: 10px 15px;
+       vertical-align: middle;
+   }
+   .footer-distributed .footer-center i.fa-envelope {
+       font-size: 17px;
+       line-height: 38px;
+   }
+   
+   .footer-distributed .footer-center p {
+       display: inline-block;
+       color: #ffffff;
+       vertical-align: middle;
+       margin: 0;
+   }
+   
+   .footer-distributed .footer-center p span {
+       display: block;
+       font-weight: normal;
+       font-size: 14px;
+       line-height: 2;
+   }
+   
+   .footer-distributed .footer-center p a {
+       color: #ffffff;
+       text-decoration: none;
+       ;
+   }
+   
+   /* Footer Şirket */
+   
+   .footer-distributed .footer-right {
+       width: 30%;
+       padding-left: 200px;
+   }
+   
+   .footer-distributed .footer-company-about {
+       line-height: 20px;
+       color: #92999f;
+       font-size: 13px;
+       font-weight: normal;
+       margin: 0;
+   }
+   
+   .footer-distributed .footer-company-about span {
+       display: block;
+       color: #ffffff;
+       font-size: 18px;
+       font-weight: bold;
+       margin-bottom: 20px;
+   }
+   
+   .footer-distributed .footer-icons {
+       margin-top: 25px;
+   }
+   
+   .footer-distributed .footer-icons a {
+       display: inline-block;
+       width: 35px;
+       height: 35px;
+       cursor: pointer;
+       background-color: #33383b;
+       border-radius: 2px;
+       font-size: 20px;
+       color: #ffffff;
+       text-align: center;
+       line-height: 35px;
+       margin-right: 3px;
+       margin-bottom: 5px;
+   }
+   
+   .footer-distributed .footer-icons a:hover {
+       background-color: #51361a;
+   }
+   
+   .footer-links a:hover {
+       color: #51361a;
+   }
+   
+   @media (max-width: 880px) {
+       .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+           display: block;
+           width: 100%;
+           margin-bottom: 40px;
+           text-align: center;
+       }
+       .footer-distributed .footer-center i {
+           margin-left: 0;
+       }
+   }

@@ -1,0 +1,45 @@
+                           <!-- İlgi Çekici Kısım-->
+    <div class="row">
+        <div class="col-2">
+            {{#if sessionFlash.message}}
+              <div class="{{sessionFlash.type}}" >
+                  {{sessionFlash.message}}
+              </div>
+            {{/if}}
+            <h1>En Güzel Çikolataları Denemeye Hoşgeldiniz!</h1>
+            <p >Yolcuğula Çıkmak İçin  <a href="https://bilgisayar.dpu.edu.tr/" class="btn">&#9755;Tıkla&#9754;</a></p>
+        </div>
+                   <!-- Anasayfa Resim-->
+        <div class="col-2">
+        <img src="resimler/Anasayfa Resim.jpg" alt="Çikolata">
+    </div>
+</div>
+</div>
+</div>
+                       <!-- çikolata resimleri -->
+       <div class="categories">
+           <h3 id="resim-title">Leziz Çikolatalar</h3>
+           <div class="small-container">
+           <div class="row">
+               <div class="col-3-1">
+                   <img src="resimler/koyu.jpg">
+               </div>
+               <div class="col-3-2">
+                <img src="resimler/orta.jpg">
+            </div>
+            <div class="col-3-3">
+                <img src="resimler/açıkk.jpg">
+            </div>
+           </div>
+        </div>
+       </div>
+
+        <!--resimler 250 şer milisaniye geç yükleniyor-->
+       <script>
+           ScrollReveal().reveal('.col-2 img',{ delay: 250 });
+           ScrollReveal().reveal('.col-3-1', { delay: 500 });
+           ScrollReveal().reveal('.col-3-2', { delay: 750 });
+           ScrollReveal().reveal('.col-3-3', { delay: 1000 });
+
+          
+       </script>
